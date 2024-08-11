@@ -1,0 +1,59 @@
+@import "../vars.css";
+
+.container {
+  margin-top: 76px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.projects {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+ 
+  gap: 15px;
+  padding-left: 20px; /* Add padding to ensure leftmost project is fully visible */
+  padding-right: 20px; 
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
+}
+
+.project-item {
+  flex: 0 0 auto; /* Prevent flex items from shrinking */
+  min-width: 300px; /* Minimum width for each project card */
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .title {
+    font-size: 28px; /* Adjust title size for smaller screens */
+  }
+  .projects {
+    padding-left: 10px; /* Adjust padding for smaller screens */
+    padding-right: 10px;
+  }
+  .project-item {
+    min-width: 80%; /* Ensure each project card is fully visible on small screens */
+  }
+ 
+}
